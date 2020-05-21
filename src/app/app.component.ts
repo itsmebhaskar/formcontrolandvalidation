@@ -10,17 +10,17 @@ export class AppComponent  {
   name = 'FormControl Demo'
 
 //creating instance of FormControl with default value John
-  nameControl:FormControl=new FormControl('John');
+  //nameControl:FormControl=new FormControl('John');
 
   //Validation
-  // nameControl:FormControl=new FormControl('John',[Validators.required,Validators.maxLength(5)]);
+  nameControl:FormControl=new FormControl('John',[Validators.required, Validators.maxLength(5)]);
 
 //method to change the nameControl Value
 nameChange()
 {
-  alert(`Value before button click---------> ${this.nameControl.value}`)
+  alert(`Value before button click---------> ${this.nameControl.value}`);
   this.nameControl.setValue('Jay');
-  alert(`Value after button click----------> ${this.nameControl.value}`)
+  alert(`Value after button click----------> ${this.nameControl.value}`);
 }
 
 

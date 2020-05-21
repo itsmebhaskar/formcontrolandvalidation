@@ -1,7 +1,10 @@
 <h1>{{name}}</h1>
 <label>Name <input  [formControl]="nameControl"  placeholder="name"></label>
-<!-- <div *ngIf="nameControl.errors.required">Name is required</div>
-<div *ngIf="nameControl.errors.maxlength">Name must be than 6</div> -->
+
+<div *ngIf="nameControl.errors?.required">Name is required</div>
+<div *ngIf="nameControl.errors?.maxlength">Name must be less than 6 letter</div>
+
+
 <br>
 <br>
 <button (click)="nameChange()">Change Name</button>
